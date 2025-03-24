@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: xsj5yss3d-go-gitops
+  description: This is GitOps manifest for xsj5yss3d-go   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: rhtap/gitops=xsj5yss3d-go
+    backstage.io/kubernetes-id: xsj5yss3d-go 
+    backstage.io/techdocs-ref: dir:. 
+    janus-idp.io/tekton: xsj5yss3d-go   
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:xsj5yss3d-go
